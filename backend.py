@@ -28,7 +28,5 @@ def download():
                 'video_url': video['url'] if video else None
             })
     except Exception as e:
+        print("ERROR:", e)
         return jsonify({'error': str(e)}), 500
-
-if __name__ == '__main__':
-    app.run(debug=True)
